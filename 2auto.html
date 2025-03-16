@@ -211,6 +211,7 @@
             .sidebar {
                 left: -250px;
                 transition: 0.3s;
+                z-index: 1000; /* 設定較大的 z-index */
             }
             .sidebar.active {
                 left: 0;
@@ -227,6 +228,7 @@
                 position: fixed;
                 top: 10px;
                 left: 12px;
+                z-index: 1001; /* 設定較大的 z-index */
             }
             .section {
                 display: flex;
