@@ -70,6 +70,10 @@
             padding: 20px;
             border: 2px solid green; /* 綠色實線，2px 薄邊框 */
             margin: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 0.8s ease-in-out;
         }
 
         /* 讓偶數區塊反轉排列 */
@@ -90,6 +94,11 @@
             text-align: center;
             font-size: 27px;
             line-height: 2;
+        }
+        /* 當 section 進入畫面時 */
+        .section.show {
+            opacity: 1;
+            transform: translateX(0);
         }
         .text a{
             text-decoration: none;
@@ -129,7 +138,7 @@
             padding: 5px;
         }
         .big_font{
-            margin-top: 7%; /* 減少上邊距 */
+            margin-top: 11%; /* 減少上邊距 */
             white-space: nowrap;
             overflow: visible ;
             text-align: center; /* 確保文本居中 */
@@ -137,19 +146,21 @@
             display: block; /* 確保為塊級元素 */
             margin-left: 0; /* 確保沒有左邊距 */
             margin-right: 0; /* 確保沒有右邊距 */
+            margin-bottom: 11%;
         }
         .big_font_title{ /*標題*/
             font-size: 55px ; /* 調整到適合的大小 */
             letter-spacing: 12px; /* 設定文字間距 */
             margin-left: 6px; /* 向右移動 6px */
-            margin-bottom: 10px;
+            margin-bottom: 0px;
         }
         .big_font_sub {  /*英文標題*/
             display: block; /* 讓 h2 變成區塊級元素 */
             text-align: center;
             font-size: 37px;
             margin: 0 auto; /* 水平置中 */
-            margin-bottom: 20px;
+            margin-bottom: 7%;
+            margin-top: 0;
         }
         .big_font_footer { /*footer*/
             font-size: 35px ; /* 調整到適合的大小 */
@@ -189,7 +200,7 @@
             );
             z-index: -1;  /* 讓它比其他內容更底層 */
             pointer-events: none; /* 讓它不阻擋點擊 */
-            animation: fadeIn 0s ease-in 1s forwards;
+            animation: fadeIn 1s ease-in 2s forwards;
         }
         @keyframes fadeIn {
            from { opacity: 0; }
@@ -267,8 +278,10 @@
                 white-space: normal;  /* 讓文字恢復換行 */
                 min-width: auto;      /* 讓寬度根據父元素調整 */
                 overflow-wrap: break-word; /* 確保長字可以斷行 */
+                margin-top: -5%;
             }
             .big_font_footer {
+                margin-top: 5%;
                font-size: 28px ;
             } 
             /*背景圖片*/
@@ -360,6 +373,15 @@
         document.getElementById('club-overview').href = data.links["club-overview"].url;
     })
     .catch(error => console.error("無法載入連結: ", error));
+    window.onload = function () {
+    const sections = document.querySelectorAll('.section');
+
+    sections.forEach((section, index) => {
+        setTimeout(() => {
+            section.classList.add('show'); // 依序加入 .show 觸發動畫
+        }, index * 300); // 每個 section 延遲 300ms 出現
+    });
+};
     </script>
     <!-- 
      
