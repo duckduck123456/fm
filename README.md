@@ -63,5 +63,6 @@ ___
 ---
 <img src="img/readme_img/07.png" alt="縮圖的連結位置" width="500">
 ---
+
 將這行的圖片連結到新的圖片即可
   
