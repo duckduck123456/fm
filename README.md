@@ -1,6 +1,6 @@
 ___
 ## 本專案的主檔案網址: 
- [https://GrandWarden700.github.io/fm/2auto](https://GrandWarden700.github.io/fm/2auto)
+ [https://duckduck123456.github.io/fm/2auto](https://duckduck123456.github.io/fm/2auto)
 ## 如何取得專案的網域?:
 ### 設定 --> 側邊欄的「Pages」
 
