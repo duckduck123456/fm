@@ -9,7 +9,7 @@ ___
 **路徑:**
 ```
 點兩下「課表」進入資料夾 --> Add file --> Upload files --> 將檔案拖放上來 --> Commit changes
-                       (按鈕)       (按鈕)            (上傳檔案)        (綠色按鈕)
+                           (按鈕)       (按鈕)            (上傳檔案)        (綠色按鈕)
 ```
    ---
 <img src="img/readme_img/01.png" alt="檔案上傳路徑" style="border: 20px solid black; width: 500px;">
