@@ -1,4 +1,18 @@
 ___
+## 本專案的主檔案網址: 
+ [https://GrandWarden700.github.io/fm/2auto](https://GrandWarden700.github.io/fm/2auto)
+## 如何取得專案的網域?:
+### 設定 --> 側邊欄的「Pages」
+---
+<img src="img/readme_img/08.png" alt="主檔案網址說明1" width="500">
+---
+<img src="img/readme_img/09.png" alt="主檔案網址說明2" width="500">
+---
+<img src="img/readme_img/10.png" alt="主檔案網址說明3" width="500">
+---
+
+### 記得在網域後面加上想查看的檔案名和資料夾路徑
+___
 # 如何替換新生體驗營課表?
 
 ## 步驟
