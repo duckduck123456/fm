@@ -2,7 +2,7 @@ ___
 ## 本專案的主檔案網址: 
  [https://duckduck123456.github.io/fm/2auto](https://duckduck123456.github.io/fm/2auto)
 ## 如何取得專案的網域?:
-### 設定 --> 側邊欄的「Pages」
+### 設定 --> 側邊欄的「Pages」 --> 畫面正中間就是專案的網域
 
 ---
 <img src="img/readme_img/08.png" alt="主檔案網址說明1" width="500">
