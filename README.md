@@ -3,6 +3,7 @@ ___
  [https://GrandWarden700.github.io/fm/2auto](https://GrandWarden700.github.io/fm/2auto)
 ## 如何取得專案的網域?:
 ### 設定 --> 側邊欄的「Pages」
+
 ---
 <img src="img/readme_img/08.png" alt="主檔案網址說明1" width="500">
 ---
