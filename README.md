@@ -1,6 +1,4 @@
 ___
-## 本專案的主檔案網址: 
- [https://grandwarden700.github.io/a/2auto](https://grandwarden700.github.io/a/2auto)
 ## 如何取得專案的網域?:
 ### 設定 --> 側邊欄的「Pages」
 
