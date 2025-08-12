@@ -49,16 +49,6 @@
   button:hover {
     background-color: #0056b3;
   }
-  #goLink {
-    text-decoration: none;
-  }
-  #goButton {
-    display: none;
-    background-color: #28a745;
-  }
-  #goButton:hover {
-    background-color: #218838;
-  }
 </style>
 </head>
 <body>
@@ -67,8 +57,7 @@
     <h2>玩家部落查詢</h2>
     <input type="text" id="playerTagInput" placeholder="輸入玩家代號 (例如 #YJH8Y57YT)">
     <br>
-    <button id="confirmButton" onclick="generateUrl()">確認</button>
-    <a id="goLink" href="#" target="_blank"><button id="goButton">前往</button></a>
+    <button onclick="generateUrl()">確認</button>
   </div>
 
   <script>
@@ -79,10 +68,7 @@
       }
       if (playerTag) {
         const url = `https://www.warreport.app/#/players/${playerTag}`;
-        const goLink = document.getElementById('goLink');
-        goLink.href = url;
-        document.getElementById('goButton').style.display = 'inline-block';
-        document.getElementById('confirmButton').style.display = 'none';
+        window.open(url, '_blank');
       }
     }
   </script>
