@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Player Tag URL Generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f2f5;
+  }
+  .container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  input[type="text"] {
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.2em;
+  }
+  button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin: 8px;
+    font-size: 1.2em;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  #goLink {
+    text-decoration: none;
+  }
+  #goButton {
+    display: none;
+    background-color: #28a745;
+  }
+  #goButton:hover {
+    background-color: #218838;
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>玩家部落查詢</h2>
+    <input type="text" id="playerTagInput" placeholder="輸入玩家代號 (例如 8J8P8Y0LL)">
+    <br>
+    <button onclick="generateUrl()">確認</button>
+    <a id="goLink" href="#" target="_blank"><button id="goButton">前往</button></a>
+  </div>
+
+  <script>
+    function generateUrl() {
+      let playerTag = document.getElementById('playerTagInput').value;
+      if (playerTag.startsWith('#')) {
+        playerTag = playerTag.substring(1);
+      }
+      if (playerTag) {
+        const url = `https://www.warreport.app/#/players/${playerTag}`;
+        const goLink = document.getElementById('goLink');
+        goLink.href = url;
+        document.getElementById('goButton').style.display = 'inline-block';
+      }
+    }
+  </script>
+
+</body>
+</html>
