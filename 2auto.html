@@ -306,6 +306,7 @@
             <li><a id="itouch" href="#" target="_blank">iTouch</a></li>
             <li><a id="course-query" href="#" target="_blank">開課查詢系統</a></li>
             <li><a id="elective-system" href="#" target="_blank">選課系統</a></li>
+            <li><a id="active-group" href="#" target="_blank">新生資料填寫</a></li>
             <li><a id="campus-map" href="#"  target="_blank">校園地圖</a></li>
         </ul>
     </div>
@@ -376,6 +377,7 @@
         document.getElementById('freshman-book').href = data.links["freshman-book"].url;
         document.getElementById('department-web').href = data.links["department-web"].url;
         document.getElementById('club-overview').href = data.links["club-overview"].url;
+        document.getElementById('active-group').href = data.links["active-group"].url;
     })
     .catch(error => console.error("無法載入連結: ", error));
     window.onload = function () {

@@ -28,6 +28,10 @@
             "url": "https://fm.cycu.edu.tw/",
             "description": "新生一網通"
         },
+        "active-group": {
+            "url": "https://itouch.cycu.edu.tw/active_system/active_group/cycu_20/login_index.jsp",
+            "description": "新生一網通 資料填寫"
+        },
         "registration": {
             "url": "https://fm.cycu.edu.tw/註冊篇/",
             "description": "新生一網通 註冊篇"
