@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的部落衝突</title>
+
+    <link rel="icon" href="img/icon/kk8n0-75rc0-001.ico">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: 	#79FF79;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+         /*     padding-top: 10px;減少內邊距 */
+            margin-top: 0px; /* 讓整個區塊往上移動 */
+        }
+        .profile {
+            margin-bottom: 30px;
+        }
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .link-item:hover {
+            background: #0056b3;
+        }
+        .share-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="img/icon/84443.jpg" alt="部落等級">
+            <h2>我的部落們</h2>
+        </div>
+        <div class="links">
+            <div class="link-item" onclick="window.open('https://www.warreport.app/#/players/LVRQ2QJCL', '_blank')">
+                <span>Wu</span>
+                <button class="share-btn" onclick="shareLink(event, 'https://www.warreport.app/#/players/LVRQ2QJCL')">⋮</button>
+            </div>
+            <div class="link-item" onclick="window.open('https://www.warreport.app/#/players/LVRG9VUUU', '_blank')">
+                <span>Hannn</span>
+                <button class="share-btn" onclick="shareLink(event, 'https://www.warreport.app/#/players/LVRG9VUUU')">⋮</button>
+            </div>
+          <!--  <div class="link-item" onclick="window.open('https://www.warreport.app/#/players/G2QVPP90J', '_blank')">
+                <span>駕照沒帶300塊</span>
+                <button class="share-btn" onclick="shareLink(event, 'https://www.warreport.app/#/players/G2QVPP90J')">⋮</button>
+            </div>  -->
+            <div class="link-item" onclick="window.open('https://www.warreport.app/#/players/QU2JV2Q9L', '_blank')">
+                <span>DuFlied</span>
+                <button class="share-btn" onclick="shareLink(event, 'https://www.warreport.app/#/players/QU2JV2Q9L')">⋮</button>
+            </div>
+            <div class="link-item" onclick="window.open('https://www.warreport.app/#/players/QC0RQUUV9', '_blank')">
+                <span>大牌不潔加300</span>
+                <button class="share-btn" onclick="shareLink(event, 'https://www.warreport.app/#/players/QC0RQUUV9')">⋮</button>
+            </div>
+           <!-- <div class="link-item" onclick="window.open('https://www.warreport.app/#/players/G02YP2J2U', '_blank')">
+                <span>NJ600s</span>
+                <button class="share-btn" onclick="shareLink(event, 'https://www.warreport.app/#/players/G02YP2J2U')">⋮</button>
+            </div>  -->
+            <div class="link-item" onclick="window.open('https://www.warreport.app/#/players/LRGYPCRLP', '_blank')">
+                <span>謙</span>
+                <button class="share-btn" onclick="shareLink(event, 'https://www.warreport.app/#/players/LRGYPCRLP')">⋮</button>
+            </div>
+            
+            <div class="link-item" onclick="window.open('https://www.warreport.app/#/players/QJV0QRLGR', '_blank')">
+                <span>珀伽索斯</span>
+                <button class="share-btn" onclick="shareLink(event, 'https://www.warreport.app/#/players/QJV0QRLGR')">⋮</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function shareLink(event, url) {
+            event.stopPropagation(); // 防止點擊按鈕時連結被打開
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    url: url
+                });
+            } else {
+                alert('你的瀏覽器不支援分享功能');
+            }
+        }
+    </script>
+</body>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>COC Player Tag URL Generator</title>
+
+<link rel="icon" href="img/icon/kk8n0-75rc0-001.ico"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f2f5;
+  }
+  .container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  input[type="text"] {
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.2em;
+  }
+  button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin: 8px;
+    font-size: 1.2em;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>部落衝突玩家查詢</h2>
+    <input type="text" id="playerTagInput" placeholder="輸入玩家代號 (例如 #YJH8Y57YT)">
+    <br>
+    <button onclick="generateUrl()">確認</button>
+  </div>
+
+  <script>
+    function generateUrl() {
+      let playerTag = document.getElementById('playerTagInput').value;
+      if (playerTag.startsWith('#')) {
+        playerTag = playerTag.substring(1);
+      }
+      if (playerTag) {
+        const url = `https://www.warreport.app/#/players/${playerTag}`;
+        window.open(url, '_blank');
+      }
+    }
+  </script>
+
+</body>
+</html>
